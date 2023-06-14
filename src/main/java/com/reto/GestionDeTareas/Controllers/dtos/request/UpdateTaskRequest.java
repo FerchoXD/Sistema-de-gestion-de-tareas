@@ -1,18 +1,12 @@
-package com.reto.GestionDeTareas.entities;
+package com.reto.GestionDeTareas.Controllers.dtos.request;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDate;
 
-@Entity
-@Table(name = "Tasks")
+import java.time.LocalDate;
 @Getter
 @Setter
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class UpdateTaskRequest {
     private String title;
     private String description;
     private boolean completed;
